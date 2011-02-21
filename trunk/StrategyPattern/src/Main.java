@@ -8,8 +8,8 @@ import logon.UnsecureLogon;
 public class Main {
 	
 	public static void main(String[] args) {
-        //Logon logon = new UnsecureLogon();
-        Logon logon = new SecureMD5Logon();
+        Logon logon = new UnsecureLogon();
+        //Logon logon = new SecureMD5Logon();
         logon.setPassword("tajneHaslo123");
         System.out.println("Has³o po zakodowaniu: " + logon.getPassword());
 
