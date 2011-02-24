@@ -4,20 +4,20 @@ import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class SHA256PasswordEncoder implements IPasswordEncoder {
+public class SHA512PasswordEncoder implements IPasswordEncoder {
 
 	@Override
 	public String encode(String password) {
 		String answer = null;
-		MessageDigest sha256;
+		MessageDigest sha512;
 		
 		try {
-			sha256 = MessageDigest.getInstance("SHA-256");
-		    sha256.update(password.getBytes(), 0, password.length());
+			sha512 = MessageDigest.getInstance("SHA-512");
+		    sha512.update(password.getBytes(), 0, password.length());
 		    //kod dodany
-		    byte[] tab = sha256.digest();
+		    byte[] tab = sha512.digest();
 		    
-		    answer = String.format("%1$064X", new BigInteger(1, tab)); //chyba nie trzeba 032
+		    answer = String.format("%1$0128X", new BigInteger(1, tab)); //chyba nie trzeba 032
 		    
 		    //kod dodany
 		    //wyswietlanie 
@@ -49,7 +49,7 @@ public class SHA256PasswordEncoder implements IPasswordEncoder {
 		}
 		
 		
-		return "(SHA256)" + answer;
+		return "(SHA512)" + answer;
 	}
 
 }
