@@ -1,3 +1,9 @@
+import java.util.Scanner;
+
+import events.Event;
+import events.EventDispatcher;
+import events.IEventListener;
+
 
 public class Main {
 
@@ -5,7 +11,38 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		EventDispatcher eventDispatcher = new EventDispatcher();
+		
+		IEventListener textDisplay = new TextDisplay();
+	    eventDispatcher.addEventListener(textDisplay);
+	    
+	    IEventListener characterCounter = new CharacterCounter();
+	    eventDispatcher.addEventListener(characterCounter);
+		
+		Scanner input = new Scanner(System.in);
+		
+		while(input.hasNext()){
+			String text = input.nextLine();
+			
+			if (text.equals("--count-off")){
+				eventDispatcher.removeEventListener(characterCounter);
+				System.out.println("Character counter disabled");
+				continue;
+			}
+			
+			if (text.equals("--count-on")){
+				eventDispatcher.addEventListener(characterCounter);
+				System.out.println("Character counter enabled");
+				continue;
+			}
+			
+			if (text.equals("--exit")){
+				System.out.println("Exiting...");
+				break;
+			}
+						
+			eventDispatcher.dispatchEvent(new Event(text));
+		}
 
 	}
 
