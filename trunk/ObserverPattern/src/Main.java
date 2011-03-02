@@ -18,7 +18,11 @@ public class Main {
 	    
 	    IEventListener characterCounter = new CharacterCounter();
 	    eventDispatcher.addEventListener(characterCounter);
+	    
+	    IEventListener textAnagram = new TextAnagram();
+	    eventDispatcher.addEventListener(textAnagram);
 		
+	    System.out.println("Podaj tekst:");
 		Scanner input = new Scanner(System.in);
 		
 		while(input.hasNext()){
@@ -42,6 +46,8 @@ public class Main {
 			}
 						
 			eventDispatcher.dispatchEvent(new Event(text));
+			
+			System.out.println("Podaj nastepny tekst:");
 		}
 
 	}
