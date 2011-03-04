@@ -3,7 +3,6 @@ import encoders.MD5PasswordEncoder;
 import encoders.SHA256PasswordEncoder;
 import encoders.SHA512PasswordEncoder;
 import logon.Logon;
-import logon.SecureMD5Logon;
 import logon.UnsecureLogon;
 
 
