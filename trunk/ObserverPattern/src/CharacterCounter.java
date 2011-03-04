@@ -10,7 +10,7 @@ public class CharacterCounter implements IEventListener {
 		int charCount = event.getText().length();
 		totalCount += charCount;
 		System.out.println("[CharacterCounter] character length: " + charCount
-				+ " total character length " + totalCount);
+				+ " | total character length " + totalCount);
 	}
 
 }

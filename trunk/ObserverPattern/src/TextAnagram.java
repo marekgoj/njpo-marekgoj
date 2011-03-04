@@ -16,14 +16,16 @@ public class TextAnagram implements IEventListener {
 		
 		int textLength = text.length();
 		
-		int counter = 0;
-		int iRandom;
+		int counter = 0; 	//licznik petli
+		int iRandom;		//zmienna pamietajaca wylosowana liczbe
+		int counterRandom = 0;	//licznik wykonan losowania 
 		
 		System.out.print("[TextAnagram] ");
 		
 		while(counter < textLength){
 			do{
 				iRandom = rnd.nextInt(textLength);
+				counterRandom++;
 			}while(tText[iRandom] == (char) -1);
 			
 			System.out.print(tText[iRandom]);
@@ -31,7 +33,6 @@ public class TextAnagram implements IEventListener {
 			counter++;
 		}
 		
-		System.out.println();
+		System.out.println(" | draw times: " + counterRandom);
 	}
 }
-
