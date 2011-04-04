@@ -32,8 +32,7 @@ public class Main {
 	/**
 	 * Wyœwietla opis i koszt wybranego napoju
 	 * 
-	 * @param b
-	 *            - obiekt napoju
+	 * @param b - obiekt napoju
 	 */
 	private static void showSummary(Beverage b) {
 		System.out.println("Opis: " + b.getDescription());
