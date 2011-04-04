@@ -7,10 +7,12 @@ public class Swiatlo{
 	public void wlacz(){
 		stan = "wlaczone";
 		jasnosc = 100;
+		System.out.println("> Wlaczam swiatlo");
 	}
 	
 	public void wylacz(){
 		stan = "wylaczone";
+		System.out.println("> Wylaczam swiatlo");
 	}
 	
 	public void ustawJasnosc(int jasnosc){
@@ -22,6 +24,7 @@ public class Swiatlo{
 			jasnosc = 100;
 		else
 			jasnosc += 10;
+		System.out.println("> Zwiekszam jasnosc");
 	}
 	
 	public void zmniejszJasnosc(){
@@ -29,9 +32,11 @@ public class Swiatlo{
 			jasnosc = 0;
 		else
 			jasnosc -= 10;
+		System.out.println("> Zmniejszam jasnosc");
 	}
 	
 	public void pokazStan(){
-		System.out.println("> Stan: " + stan + " | Jasnosc: " + jasnosc);
+		System.out.println(">>> Stan: " + stan + " | Jasnosc: " + jasnosc);
+		System.out.println();
 	}
 }
