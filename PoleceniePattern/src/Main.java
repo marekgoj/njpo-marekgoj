@@ -47,6 +47,29 @@ public class Main {
 		pilot.przyciskW³¹czWciœniêty();
 		swiatlo1.pokazStan();
 		
+		pilot.przyciskWycofajPolecenieWcisniety();
+		swiatlo1.pokazStan();
+		
+		pilot.przyciskWycofajPolecenieWcisniety();
+		swiatlo1.pokazStan();
+		
+		pilot.przyciskWycofajPolecenieWcisniety();
+		swiatlo1.pokazStan();
+		
+		pilot.przyciskWycofajPolecenieWcisniety();
+		swiatlo1.pokazStan();
+		
+		pilot.przyciskWycofajPolecenieWcisniety();
+		swiatlo1.pokazStan();
+		
+		pilot.przyciskWycofajPolecenieWcisniety();
+		swiatlo1.pokazStan();
+		
+		pilot.przyciskWycofajPolecenieWcisniety();
+		swiatlo1.pokazStan();
+		
+		pilot.przyciskWycofajPolecenieWcisniety();
+		swiatlo1.pokazStan();
 	}
 
 }
